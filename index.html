@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: black;">
+  <head>
+    <title>Renol Dev</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Renol Machado" />
+    <meta name="description" content="This site contains content that I've worked on" />
+    <meta property="og:title" content="Renol Machado" />
+    <meta property="og:description" content="This site contains content that I've worked on" />
+    <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVCSNaZSKSZGljM5mHGGeOIJldvcMBYMzIv6c7E_oUIg&s" />
+    <meta property="og:url" content="/index.html" />
+    <meta property="og:site_name" content="Renol Dev" />
+    <meta name="twitter:card" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVCSNaZSKSZGljM5mHGGeOIJldvcMBYMzIv6c7E_oUIg&s" />
+    <meta name="twitter:image:alt" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVCSNaZSKSZGljM5mHGGeOIJldvcMBYMzIv6c7E_oUIg&s" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <div id="loading"></div>
+    <h1>Loading...</h1>
+  </body>
+</html>
+
+<script type="module">
+  import { tsParticles } from 'https://cdn.jsdelivr.net/npm/tsparticles-engine/+esm';
+  import { loadFull } from 'https://cdn.jsdelivr.net/npm/tsparticles/+esm';
+
+  async function loadParticles(options) {
+    await loadFull(tsParticles);
+
+    await tsParticles.load(options);
+  }
+
+  const configs = [
+    {
+      particles: {
+        number: {
+          value: 0,
+        },
+        color: {
+          value: '#fff',
+        },
+        shape: {
+          type: 'circle',
+        },
+        opacity: {
+          value: 0.5,
+        },
+        size: {
+          value: { min: 10, max: 50 },
+          animation: {
+            enable: true,
+            speed: 100,
+            sync: false,
+            startValue: 'min',
+            destroy: 'max',
+          },
+        },
+        move: {
+          enable: true,
+          speed: 10,
+          direction: 'none',
+          outModes: 'destroy',
+        },
+      },
+      interactivity: {
+        events: {
+          onhover: {
+            enable: true,
+            mode: 'trail',
+          },
+        },
+        modes: {
+          trail: {
+            delay: 0.005,
+            quantity: 5,
+            pauseOnStop: true,
+          },
+        },
+      },
+      retina_detect: true,
+      background: {
+        color: '#000000',
+        image: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVCSNaZSKSZGljM5mHGGeOIJldvcMBYMzIv6c7E_oUIg&s')",
+        position: '50% 50%',
+        repeat: 'no-repeat',
+        size: 'cover',
+      },
+      backgroundMask: {
+        enable: true,
+        cover: {
+          color: '#000000',
+        },
+      },
+    },
+  ];
+
+  loadParticles(configs);
+</script>
