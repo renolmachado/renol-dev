@@ -1,0 +1,126 @@
+# Cursor Rules for RenolDev (Angular 21 Project)
+
+## Project Overview
+- Angular 21 application with Server-Side Rendering (SSR)
+- TypeScript 5.9.2
+- Tailwind CSS v4
+- Vitest for unit testing
+- Express server for SSR
+- Package manager: npm 11.3.0
+
+## Code Style & Formatting
+
+### Prettier Configuration
+- Line width: 100 characters
+- Use single quotes for strings
+- HTML files use Angular parser
+- Run prettier before committing code
+
+### TypeScript
+- Use strict TypeScript settings
+- Always define types explicitly (avoid `any`)
+- Use interfaces for objects and type aliases for unions
+- Prefer `const` over `let`, avoid `var`
+- Use async/await over promises when possible
+
+## Angular Best Practices
+
+### Component Structure
+- Use standalone components (Angular 21+ default)
+- Keep components small and focused (Single Responsibility Principle)
+- Use `OnPush` change detection strategy where possible
+- Prefix components with `app` as defined in angular.json
+- Use `.ts` files for component logic (not inline templates for complex components)
+- Separate HTML templates (`.html`) and styles (`.css`)
+
+### File Naming
+- Components: `component-name.ts`, `component-name.html`, `component-name.css`
+- Services: `service-name.service.ts`
+- Guards: `guard-name.guard.ts`
+- Pipes: `pipe-name.pipe.ts`
+- Directives: `directive-name.directive.ts`
+
+### Signals and Reactivity
+- Prefer signals for reactive state management
+- Use computed signals for derived state
+- Use effect() sparingly and only when necessary
+
+### Dependency Injection
+- Use `inject()` function in components and services
+- Avoid constructor-based injection for new code
+- Use `providedIn: 'root'` for singleton services
+
+### Routing
+- Use functional guards and resolvers
+- Lazy load feature modules when appropriate
+- Define routes in separate `.routes.ts` files
+
+## SSR Considerations
+- Be mindful of browser-only APIs (localStorage, window, document)
+- Use `isPlatformBrowser()` or `isPlatformServer()` for platform-specific code
+- Avoid direct DOM manipulation; use Angular's Renderer2 when necessary
+- Test SSR builds regularly with `npm run build && npm run serve:ssr:renol-dev`
+
+## Tailwind CSS Guidelines
+- Use Tailwind v4 utility classes
+- Follow mobile-first responsive design
+- Use semantic class names for complex components
+- Group related utilities together
+- Prefer Tailwind utilities over custom CSS when possible
+- Use `@apply` sparingly in CSS files
+
+## Testing with Vitest
+- Write unit tests for all services and complex components
+- Test file naming: `*.spec.ts`
+- Aim for meaningful test coverage
+- Mock dependencies appropriately
+- Use Vitest's built-in matchers and utilities
+- Run tests with `ng test`
+
+## Code Generation
+- Use Angular CLI for generating new components: `ng generate component component-name`
+- Use Angular CLI for other artifacts: `ng generate service|guard|pipe|directive name`
+- Always review generated code for project-specific adjustments
+
+## General Guidelines
+- Write clear, self-documenting code
+- Add comments for complex logic or business rules
+- Keep functions small and focused
+- Use meaningful variable and function names
+- Handle errors gracefully with proper error messages
+- Log errors appropriately (consider SSR context)
+
+## Performance
+- Lazy load routes and modules
+- Use trackBy functions in *ngFor directives
+- Optimize images and assets
+- Minimize bundle size (check budget in angular.json)
+- Use OnPush change detection strategy
+- Avoid memory leaks by unsubscribing from observables
+
+## Git & Version Control
+- Write meaningful commit messages
+- Keep commits atomic and focused
+- Don't commit node_modules, dist, or build artifacts
+- Review changes before committing
+
+## Development Workflow
+- Start dev server: `npm start` or `ng serve`
+- Build for production: `npm run build`
+- Run tests: `npm test`
+- Serve SSR: `npm run serve:ssr:renol-dev`
+
+## Security
+- Sanitize user inputs
+- Use Angular's built-in XSS protection
+- Validate data on both client and server
+- Keep dependencies up to date
+- Don't expose sensitive information in client code
+
+## Accessibility
+- Use semantic HTML elements
+- Add appropriate ARIA labels
+- Ensure keyboard navigation works
+- Test with screen readers
+- Maintain proper heading hierarchy
+- Ensure sufficient color contrast
