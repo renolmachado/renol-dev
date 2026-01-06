@@ -9,7 +9,8 @@ export class DataService {
     return [
       {
         title: 'News Pulse',
-        description: 'Stay updated with the latest news and trending stories from around the world.',
+        description:
+          'Stay updated with the latest news and trending stories from around the world.',
         image: 'https://dev-pulse-web-gules.vercel.app/og-image.png',
         link: 'https://dev-pulse-web-gules.vercel.app',
         color: 'from-gray-700 to-gray-900',
@@ -101,11 +102,24 @@ export class DataService {
       },
       {
         name: 'Cloud & DevOps',
-        items: ['AWS', 'CI/CD', 'Docker', 'IIS', 'Azure', 'Render', 'Neon', 'Vercel', 'Upstash'],
+        items: [
+          'AWS',
+          'CI/CD',
+          'Docker',
+          'Microservices',
+          'Queues',
+          'Event Driven Architecture',
+          'IIS',
+          'Azure',
+          'Render',
+          'Neon',
+          'Vercel',
+          'Upstash',
+        ],
       },
       {
         name: 'Tools & Others',
-        items: ['JIRA', 'Shortcut', 'Notion', 'Git'],
+        items: ['JIRA', 'Shortcut', 'Notion', 'Git', 'Slack'],
       },
     ];
   }

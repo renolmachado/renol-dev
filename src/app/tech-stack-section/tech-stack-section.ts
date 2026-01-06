@@ -20,7 +20,7 @@ import { DataService } from '../shared/data.service';
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
               @for (tech of category.items; track tech) {
               <div
-                class="p-4 text-center rounded-lg bg-gray-800 border border-gray-700 hover:bg-gray-700 hover:border-gray-600 transition-all hover:shadow-lg"
+                class="p-4 text-center flex items-center justify-center rounded-lg bg-gray-800 border border-gray-700 hover:bg-gray-700 hover:border-gray-600 transition-all hover:shadow-lg"
               >
                 <h4 class="font-semibold text-white text-sm">{{ tech }}</h4>
               </div>
