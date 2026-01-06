@@ -1,6 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/discover-movies/:path*", "destination": "https://dev-pulse-web-gules.vercel.app//:path*" },
-    { "source": "/news-pulse/:path*", "destination": "https://discover-movies-henna.vercel.app/:path*" }
-  ]
-}
