@@ -1,0 +1,101 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-about-section',
+  standalone: true,
+  template: `
+    <section class="py-20 bg-gray-900">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-white mb-4">About Me</h2>
+          <div class="w-24 h-1 bg-linear-to-r from-gray-500 to-gray-700 mx-auto"></div>
+        </div>
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-gray-800 rounded-lg p-8 border border-gray-700 mb-8">
+            <p class="text-lg text-gray-300 leading-relaxed mb-6">
+              I'm Renol Machado, a Software Engineer based in Canelones, Uruguay, with over 11 years
+              of experience in full-stack development. My journey has taken me from writing code to
+              leading teams and architecting complex software solutions.
+            </p>
+            <p class="text-lg text-gray-300 leading-relaxed mb-6">
+              I specialize in building scalable applications using modern technologies like React,
+              Angular, NestJS, and .NET Core. My expertise spans from designing database
+              architectures to managing cloud infrastructure on AWS and Azure. I'm passionate about
+              clean code, continuous integration/deployment, and delivering high-quality solutions
+              that make a real impact.
+            </p>
+            <p class="text-lg text-gray-300 leading-relaxed">
+              With a strong foundation in software architecture and development processes, I bring
+              long-term thinking and leadership to every project. I believe in writing maintainable
+              code that stands the test of time and creating intuitive user experiences that users
+              love.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div
+              class="text-center p-6 rounded-lg bg-gray-800 hover:bg-gray-700 hover:shadow-xl transition-all border border-gray-700"
+            >
+              <div
+                class="w-16 h-16 bg-linear-to-br from-gray-600 to-gray-800 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <svg class="w-8 h-8 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-2">Clean Code</h3>
+              <p class="text-gray-400">
+                Writing maintainable, scalable, and efficient code that stands the test of time.
+              </p>
+            </div>
+            <div
+              class="text-center p-6 rounded-lg bg-gray-800 hover:bg-gray-700 hover:shadow-xl transition-all border border-gray-700"
+            >
+              <div
+                class="w-16 h-16 bg-linear-to-br from-gray-600 to-gray-800 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <svg class="w-8 h-8 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-2">Leadership</h3>
+              <p class="text-gray-400">
+                Leading teams, managing projects, and delivering high-impact solutions for clients.
+              </p>
+            </div>
+            <div
+              class="text-center p-6 rounded-lg bg-gray-800 hover:bg-gray-700 hover:shadow-xl transition-all border border-gray-700"
+            >
+              <div
+                class="w-16 h-16 bg-linear-to-br from-gray-600 to-gray-800 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <svg class="w-8 h-8 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-2">Performance</h3>
+              <p class="text-gray-400">
+                Optimizing every aspect for lightning-fast load times and smooth interactions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  `,
+})
+export class AboutSection {}

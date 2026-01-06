@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-contact-section',
+  standalone: true,
   template: `<section class="py-20 bg-linear-to-br from-black via-gray-900 to-gray-800">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-4xl font-bold text-white mb-4">Let's Work Together</h2>
