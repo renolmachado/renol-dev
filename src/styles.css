@@ -1,3 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace, 'Consolas', 'Monaco', 'Andale Mono';
+  background-color: #000000;
+  color: #e5e5e5;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html, body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
