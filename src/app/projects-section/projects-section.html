@@ -1,0 +1,161 @@
+<section id="projects" class="py-20 bg-linear-to-br from-black to-gray-900">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h2 class="text-4xl font-bold text-white mb-4">Featured Projects</h2>
+      <div class="w-24 h-1 bg-linear-to-r from-gray-500 to-gray-700 mx-auto"></div>
+    </div>
+
+    <div class="relative max-w-5xl mx-auto">
+      <div class="relative mx-auto" style="max-width: 900px">
+        <div class="relative">
+          <svg viewBox="0 0 426.001 426.001" class="w-full h-auto drop-shadow-2xl">
+            <defs>
+              <linearGradient id="frameGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#4b5563" />
+                <stop offset="100%" stop-color="#1f2937" />
+              </linearGradient>
+            </defs>
+            <g>
+              <path
+                fill="url(#frameGradient)"
+                d="M406.813,54.222H19.189C8.591,54.222,0,62.814,0,73.411v279.178c0,10.598,8.592,19.189,19.189,19.189h387.623
+                c10.599,0,19.189-8.594,19.189-19.189V73.411C426.002,62.813,417.41,54.222,406.813,54.222z M387.623,333.399H38.379V141.55h349.244V333.399L387.623,333.399z"
+              />
+
+              <circle
+                cx="272.488"
+                cy="99.782"
+                r="17.844"
+                fill="#374151"
+                stroke="#1f2937"
+                stroke-width="1.5"
+              />
+
+              <circle
+                cx="320.461"
+                cy="99.782"
+                r="17.844"
+                fill="#4b5563"
+                stroke="#374151"
+                stroke-width="1.5"
+              />
+
+              <circle
+                cx="368.436"
+                cy="99.782"
+                r="17.844"
+                fill="#6b7280"
+                stroke="#4b5563"
+                stroke-width="1.5"
+              />
+            </g>
+          </svg>
+
+          <div
+            class="absolute"
+            style="
+              top: 33.2%;
+              left: 9%;
+              width: 82%;
+              height: 57%;
+              overflow: hidden;
+              border-radius: 4px;
+            "
+          >
+            <div class="relative w-full h-full transition-all duration-500 ease-in-out">
+              @for (project of projects; track project.title; let i = $index) {
+              <div
+                class="absolute inset-0 transition-all duration-500 ease-in-out"
+                [class.opacity-100]="currentProjectIndex() === i"
+                [class.opacity-0]="currentProjectIndex() !== i"
+                [class.translate-x-full]="currentProjectIndex() < i"
+                [class.-translate-x-full]="currentProjectIndex() > i"
+                [class.translate-x-0]="currentProjectIndex() === i"
+              >
+                <div
+                  class="w-full h-full bg-linear-to-br {{
+                    project.color
+                  }} flex items-center justify-center p-8"
+                >
+                  <div class="text-center text-white">
+                    <h3 class="text-3xl font-bold mb-4">{{ project.title }}</h3>
+                    <p class="text-lg mb-6 opacity-90">{{ project.description }}</p>
+                    <a
+                      [href]="project.link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-block bg-gray-200 text-black font-semibold px-6 py-3 rounded-lg hover:bg-white transition-colors shadow-lg"
+                    >
+                      View Project
+                    </a>
+                  </div>
+                </div>
+              </div>
+              }
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center gap-8 mt-8">
+          <button
+            (click)="previousProject()"
+            class="w-12 h-12 rounded-full bg-gray-800 border border-gray-700 shadow-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
+            aria-label="Previous project"
+          >
+            <svg
+              class="w-6 h-6 text-gray-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <div class="flex gap-2">
+            @for (project of projects; track project.title; let i = $index) {
+            <button
+              (click)="goToProject(i)"
+              class="w-3 h-3 rounded-full transition-all duration-300"
+              [class.bg-gray-400]="currentProjectIndex() === i"
+              [class.w-8]="currentProjectIndex() === i"
+              [class.bg-gray-700]="currentProjectIndex() !== i"
+              [attr.aria-label]="'Go to ' + project.title"
+            ></button>
+            }
+          </div>
+
+          <button
+            (click)="nextProject()"
+            class="w-12 h-12 rounded-full bg-gray-800 border border-gray-700 shadow-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
+            aria-label="Next project"
+          >
+            <svg
+              class="w-6 h-6 text-gray-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="mt-8 text-center">
+          <h3 class="text-2xl font-bold text-white mb-2">{{ currentProject.title }}</h3>
+          <p class="text-gray-400 max-w-2xl mx-auto">{{ currentProject.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
