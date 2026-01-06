@@ -1,9 +1,9 @@
 export interface Project {
   title: string;
   description: string;
-  image: string;
+  image: string | null;
   link: string;
-  color: string;
+  tags: string[];
 }
 
 export interface Experience {

@@ -11,16 +11,16 @@ export class DataService {
         title: 'News Pulse',
         description:
           'Stay updated with the latest news and trending stories from around the world.',
-        image: 'https://dev-pulse-web-gules.vercel.app/og-image.png',
+        image: 'https://dev-pulse-web-gules.vercel.app/opengraph-image',
         link: 'https://dev-pulse-web-gules.vercel.app',
-        color: 'from-gray-700 to-gray-900',
+        tags: ['Next.js', 'TypeScript', 'Microservices', 'Queues', 'Redis', 'NestJS', 'AI'],
       },
       {
         title: 'Discover Movies',
         description: 'Explore the world of cinema with the latest releases and popular films.',
-        image: 'https://discover-movies-henna.vercel.app/og-image.png',
+        image: null,
         link: 'https://discover-movies-henna.vercel.app',
-        color: 'from-gray-800 to-black',
+        tags: ['React', 'TypeScript', 'Pixel Perfect'],
       },
     ];
   }
@@ -98,6 +98,7 @@ export class DataService {
           'PostgreSQL',
           'MySQL',
           'Microsoft SQL Server',
+          'Groq',
         ],
       },
       {
@@ -119,7 +120,18 @@ export class DataService {
       },
       {
         name: 'Tools & Others',
-        items: ['JIRA', 'Shortcut', 'Notion', 'Git', 'Slack'],
+        items: [
+          'JIRA',
+          'Shortcut',
+          'Notion',
+          'Git',
+          'Slack',
+          'AI',
+          'GitHub',
+          'Figma',
+          'Postman',
+          'Bruno',
+        ],
       },
     ];
   }

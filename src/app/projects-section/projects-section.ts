@@ -21,9 +21,9 @@ export class ProjectsSection {
         clearInterval(this.intervalId);
       }
 
-      this.intervalId = setInterval(() => {
-        this.nextProject();
-      }, 5000);
+      // this.intervalId = setInterval(() => {
+      //   this.nextProject();
+      // }, 5000);
     });
   }
 
