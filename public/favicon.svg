@@ -1,5 +1,77 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" fill="#000000"/>
-  <text x="16" y="24" font-family="'Courier New', monospace" font-size="20" font-weight="bold" fill="#e5e5e5" text-anchor="middle">R</text>
-  <rect x="2" y="2" width="28" height="28" fill="none" stroke="#6b7280" stroke-width="1"/>
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d9ff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#00ff88;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="32" height="32" rx="4" fill="url(#bgGradient)"/>
+  
+  <!-- Terminal/code brackets design -->
+  <g transform="translate(16, 16)">
+    <!-- Left bracket -->
+    <path d="M -8 -6 L -10 -6 L -10 6 L -8 6" 
+          fill="none" 
+          stroke="url(#glowGradient)" 
+          stroke-width="1.5" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+    <path d="M -10 -6 L -12 -4" 
+          fill="none" 
+          stroke="url(#glowGradient)" 
+          stroke-width="1.5" 
+          stroke-linecap="round"/>
+    <path d="M -10 6 L -12 4" 
+          fill="none" 
+          stroke="url(#glowGradient)" 
+          stroke-width="1.5" 
+          stroke-linecap="round"/>
+    
+    <!-- Right bracket -->
+    <path d="M 8 -6 L 10 -6 L 10 6 L 8 6" 
+          fill="none" 
+          stroke="url(#glowGradient)" 
+          stroke-width="1.5" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+    <path d="M 10 -6 L 12 -4" 
+          fill="none" 
+          stroke="url(#glowGradient)" 
+          stroke-width="1.5" 
+          stroke-linecap="round"/>
+    <path d="M 10 6 L 12 4" 
+          fill="none" 
+          stroke="url(#glowGradient)" 
+          stroke-width="1.5" 
+          stroke-linecap="round"/>
+    
+    <!-- Center "R" with tech style -->
+    <text x="0" 
+          y="2" 
+          font-family="'Courier New', 'Monaco', 'Consolas', monospace" 
+          font-size="10" 
+          font-weight="bold" 
+          fill="url(#glowGradient)" 
+          text-anchor="middle" 
+          dominant-baseline="middle">R</text>
+    
+    <!-- Binary code dots (geek accent) -->
+    <circle cx="-4" cy="-2" r="0.8" fill="#00d9ff" opacity="0.6"/>
+    <circle cx="-2" cy="0" r="0.8" fill="#00ff88" opacity="0.6"/>
+    <circle cx="2" cy="-1" r="0.8" fill="#00d9ff" opacity="0.6"/>
+    <circle cx="4" cy="1" r="0.8" fill="#00ff88" opacity="0.6"/>
+  </g>
+  
+  <!-- Corner tech accents -->
+  <circle cx="6" cy="6" r="1" fill="#00d9ff" opacity="0.4"/>
+  <circle cx="26" cy="6" r="1" fill="#00ff88" opacity="0.4"/>
+  <circle cx="6" cy="26" r="1" fill="#00ff88" opacity="0.4"/>
+  <circle cx="26" cy="26" r="1" fill="#00d9ff" opacity="0.4"/>
 </svg>
