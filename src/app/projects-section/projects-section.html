@@ -5,7 +5,11 @@
       <div class="w-24 h-1 bg-linear-to-r from-gray-500 to-gray-700 mx-auto"></div>
     </div>
 
-    <div class="relative max-w-5xl mx-auto">
+    <div
+      class="relative max-w-5xl mx-auto"
+      (mouseenter)="pauseTimer()"
+      (mouseleave)="resumeTimer()"
+    >
       <div class="relative mx-auto" style="max-width: 900px">
         <div class="relative">
           <img

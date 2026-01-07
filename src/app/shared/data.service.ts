@@ -9,10 +9,9 @@ export class DataService {
     return [
       {
         title: 'News Pulse',
-        description:
-          'Stay updated with the latest news and trending stories from around the world.',
-        image: 'https://dev-pulse-web-gules.vercel.app/opengraph-image',
-        link: 'https://dev-pulse-web-gules.vercel.app',
+        description: `With News Pulse, my goal was to integrate advanced concepts such as AI, microservices, message queues, and Redis to build a robust platform for aggregating and analyzing news from multiple sources. I aimed to develop a fully functional product that spans every layer of software architecture—from a high-performance frontend to a complex backend and database management.`,
+        image: 'https://daily-news-pulse.vercel.app/opengraph-image',
+        link: 'https://daily-news-pulse.vercel.app',
         tags: ['Next.js', 'TypeScript', 'Microservices', 'Queues', 'Redis', 'NestJS', 'AI'],
         github: 'https://github.com/renolmachado/dev-pulse',
       },

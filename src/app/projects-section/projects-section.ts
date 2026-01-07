@@ -1,4 +1,4 @@
-import { Component, signal, effect, inject } from '@angular/core';
+import { Component, signal, effect, inject, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DataService } from '../shared/data.service';
 import { Project } from '../shared/types';
@@ -9,11 +9,12 @@ import { Project } from '../shared/types';
   imports: [CommonModule],
   templateUrl: './projects-section.html',
 })
-export class ProjectsSection {
+export class ProjectsSection implements OnDestroy {
   private readonly dataService = inject(DataService);
   protected readonly projects: Project[] = this.dataService.getProjects();
   protected readonly currentProjectIndex = signal(0);
   private intervalId?: ReturnType<typeof setInterval>;
+  private isPaused = false;
 
   constructor() {
     effect(() => {
@@ -21,10 +22,37 @@ export class ProjectsSection {
         clearInterval(this.intervalId);
       }
 
-      this.intervalId = setInterval(() => {
-        this.nextProject();
-      }, 5000);
+      if (!this.isPaused) {
+        this.startTimer();
+      }
     });
+  }
+
+  ngOnDestroy(): void {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
+  }
+
+  private startTimer(): void {
+    this.intervalId = setInterval(() => {
+      this.nextProject();
+    }, 5000);
+  }
+
+  protected pauseTimer(): void {
+    this.isPaused = true;
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+      this.intervalId = undefined;
+    }
+  }
+
+  protected resumeTimer(): void {
+    this.isPaused = false;
+    if (!this.intervalId) {
+      this.startTimer();
+    }
   }
 
   protected get currentProject(): Project {
