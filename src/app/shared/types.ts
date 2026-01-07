@@ -4,6 +4,7 @@ export interface Project {
   image: string | null;
   link: string;
   tags: string[];
+  github: string;
 }
 
 export interface Experience {

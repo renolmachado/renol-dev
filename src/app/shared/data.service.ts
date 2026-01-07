@@ -14,6 +14,7 @@ export class DataService {
         image: 'https://dev-pulse-web-gules.vercel.app/opengraph-image',
         link: 'https://dev-pulse-web-gules.vercel.app',
         tags: ['Next.js', 'TypeScript', 'Microservices', 'Queues', 'Redis', 'NestJS', 'AI'],
+        github: 'https://github.com/renolmachado/dev-pulse',
       },
       {
         title: 'Discover Movies',
@@ -21,6 +22,7 @@ export class DataService {
         image: null,
         link: 'https://discover-movies-henna.vercel.app',
         tags: ['React', 'TypeScript', 'Pixel Perfect'],
+        github: 'https://github.com/renolmachado/discover-movies',
       },
     ];
   }
