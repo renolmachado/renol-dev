@@ -1,6 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, PLATFORM_ID, inject as angularInject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { inject } from '@vercel/analytics';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,12 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.css',
 })
 export class App {
-  protected readonly title = signal('renol-dev');
+  private readonly platformId = angularInject(PLATFORM_ID);
+  protected readonly title = signal('Renol Dev');
+
+  constructor() {
+    if (isPlatformBrowser(this.platformId)) {
+      inject();
+    }
+  }
 }
