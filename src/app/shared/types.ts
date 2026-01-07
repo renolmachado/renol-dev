@@ -1,5 +1,6 @@
 export interface Project {
   title: string;
+  shortDescription?: string;
   description: string;
   image: string | null;
   link: string;

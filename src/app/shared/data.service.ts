@@ -17,8 +17,9 @@ export class DataService {
       },
       {
         title: 'Discover Movies',
+        shortDescription: 'Discover movies with a high-end cinematic experience',
         description: `Developed as a technical assessment, this application focuses on a high-end cinematic discovery experience. The project emphasizes 'pixel-perfect' design and sophisticated state management. Built with React, it leverages React Query (TanStack) for efficient data fetching, Redux for global state, and React Router for seamless navigation, ensuring a polished, high-performance UI`,
-        image: 'https://reel-radar.vercel.app/api/og',
+        image: null,
         link: 'https://reel-radar.vercel.app',
         tags: ['React', 'TypeScript', 'Pixel Perfect'],
         github: 'https://github.com/renolmachado/discover-movies',
